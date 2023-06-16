@@ -195,7 +195,7 @@ tab_meins = ["김치찌ㅉ개", "된장찌개", "로제마라어묵찌개"]
 tab1, tab2, tab3 = st.tabs(tab_meuns)
 img1 = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA0MTJfMTg1%2FMDAxNjgxMjk1NzY4MTA3.byuBE3llW2ljkxpopgBTZRrbxZ-tz4SZNa20DmY0Ylsg.MqfIeGQZvtz25GXK1eBDeQtD5ZZxjwiPWIawS6pdr2gg.JPEG.iamjieunpark%2F1681295600930.jpg&type=sc960_832"
 tab1.image(img1)
-whit tab2:
+with tab2:
     img2 ="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA1MThfMjEx%2FMDAxNjg0MzY5NDYzMTU1.w1M2SqkJHLAGvGaj-fb3VGLtjHpdgpTqDFWrRxaOB-sg.iNA0Z1LzkUvKyeBH1HHdKTS9cUp5HnJcOSzpv5Qch68g.JPEG.cera23%2FIMG_3947.JPG&type=sc960_832"
     st.image(img2)
 tab3.write("이런건 없어요...상상도 마라요")
