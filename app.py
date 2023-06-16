@@ -41,8 +41,6 @@ st.image("img/다운로드.jpeg", width=100)  # 파일 경로 (app.py)
 # st.markdown -> 명백하게 마크다운을 사용하겠다
 
 
-import streamlit as st  # streamlit -> import (가져오기) -> as (st 이름)
-
 # 마크다운
 # https://heropy.blog/2017/09/30/markdown/
 st.title("마크다운")
@@ -94,7 +92,7 @@ st.write("""
          2. 있는
          4. 리스트 - 숫자를 건너 뛰어도 무시하고 순서를 따름
             1. 들여쓰기1
-                1. 들여쓰기2 #1로 시작하지 않으면 들여쓰기는
+                2. 들여쓰기2 #1로 시작하지 않으면 들여쓰기는
                     1. 들여쓰기3
         1. 순서가
         1. 1로 넣어도
@@ -103,6 +101,7 @@ st.write("""
          * 별 또는 (-)는  여백 1칸 이상과 사용하면 순서가 없는 리스트
          * 별 또는 (-)는  여백 1칸 이상과 사용하면 순서가 없는 리스트
          * 별 또는 (-)는  여백 1칸 이상과 사용하면 순서가 없는 리스트
+
 
         $$$ 가로줄
         ---
@@ -123,20 +122,20 @@ st.write("""
 # 링크
 st.divider()
 st.subheader("링크")
-l1 = https://naver.com
-l2 = https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA1MjNfMjYx%2FMDAxNjg0ODQyOTU2MzAy.NqVTY2XhBU4Tv_TNXQ9BB_Mm9TNadkXibZZ_XpDYuxAg.rvcI1B9yOW2yFvekAvsjFKfttnvYw2B_xRCV4P5Mg4sg.PNG.jisoo-060202%2Fimage.png&type=sc960_832
+l1 = "https://naver.com"
+l2 = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA1MjNfMjYx%2FMDAxNjg0ODQyOTU2MzAy.NqVTY2XhBU4Tv_TNXQ9BB_Mm9TNadkXibZZ_XpDYuxAg.rvcI1B9yOW2yFvekAvsjFKfttnvYw2B_xRCV4P5Mg4sg.PNG.jisoo-060202%2Fimage.png&type=sc960_832"
 st.write(f"""
     * [표시할 텍스트](https://naver.com)
     * [표시할 텍스트]({l1})
-    * ![이미지에 대한 설명]{https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA1MjNfMjYx%2FMDAxNjg0ODQyOTU2MzAy.NqVTY2XhBU4Tv_TNXQ9BB_Mm9TNadkXibZZ_XpDYuxAg.rvcI1B9yOW2yFvekAvsjFKfttnvYw2B_xRCV4P5Mg4sg.PNG.jisoo-060202%2Fimage.png&type=sc960_832)
-    * ![이미지에 대한 설명]({l2}}
+    * ![이미지에 대한 설명](https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA1MjNfMjYx%2FMDAxNjg0ODQyOTU2MzAy.NqVTY2XhBU4Tv_TNXQ9BB_Mm9TNadkXibZZ_XpDYuxAg.rvcI1B9yOW2yFvekAvsjFKfttnvYw2B_xRCV4P5Mg4sg.PNG.jisoo-060202%2Fimage.png&type=sc960_832)
+    * ![이미지에 대한 설명]({l2})
     * [![이미지에 대한 설명](https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA1MjNfMjYx%2FMDAxNjg0ODQyOTU2MzAy.NqVTY2XhBU4Tv_TNXQ9BB_Mm9TNadkXibZZ_XpDYuxAg.rvcI1B9yOW2yFvekAvsjFKfttnvYw2B_xRCV4P5Mg4sg.PNG.jisoo-060202%2Fimage.png&type=sc960_832)
 """)
 
 #인용
 st.divider()
 st.subheader("인용")
-if st.write(f"""
+st.write(f"""
     > 무언가 멋진 말 - 유명한 사람
     
     > 진입장벽은 수익이다 - 어느 코딩 강사
@@ -156,7 +155,7 @@ if st.write(f"""
     '''python
     print("파이썬")
     '''
-"""
+""")
 
 
 import streamlit as st
@@ -185,6 +184,6 @@ with col1:
     st.write("왼쪽")
 # col1을 기준으로 streamlit을 써주겠다
 # 블록 (:) 을 열면 -> 이 안에서는 streamlit 기능 실행시 col2에 종속
-with eol2:
+with col2:
     st.write("오른쪽")
 
