@@ -27,6 +27,7 @@ with col2: # col2을 기준으로 streamlit을 써주겠다
     # 블록 (:) 을 열면 -> 이 안에서는 streamlit 기능 실행시 col2에 종속
     st.write("오른쪽")
 
+
 # tabs = st.tabs(["김치찌개", "된장찌개", "로제마라어묵찌개"])
 tab_menus = ["김치찌개", "된장찌개", "로제마라어묵찌개"]
 tab1, tab2, tab3 = st.tabs(tab_menus)
@@ -40,7 +41,6 @@ tab3.write("이런 건 없어요... 상상도 마라요")
 exp = st.expander("Surprise!!!", expanded=False)
 exp.image("https://i.namu.wiki/i/5lWwYGj-VC8ZqJxug7Exm5-7rHE97fdZui3DWEAjm0zdLiBCbcdw4mLyGhcbZ_KecZOQr4rtwNJSFs63Rsdd_Q.webp")
 # with exp: ...
-
 
 # 입력
 st.title("입력")
