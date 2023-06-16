@@ -200,7 +200,7 @@ with tab2:
     st.image(img2)
 tab3.write("이런건 없어요...상상도 마라요")
 
-exp = st.expander("Surprise!!!", expanded=false)
+exp = st.expander("Surprise!!!", expanded=False)
 exp.image("https://i.namu.wiki/i/5lWwYGj-VC8ZqJxug7Exm5-7rHE97fdZui3DWEAjm0zdLiBCbcdw4mLyGhcbZ_KecZOQr4rtwNJSFs63Rsdd_Q.webp")
 # whit exp: ...
 
