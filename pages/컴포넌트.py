@@ -28,7 +28,7 @@ with col2:
     st.write("오른쪽")
 
 # tabs = st.tabs(["김치찌ㅉ개", "된장찌개", "로제마라어묵찌개"])
-tab_meins = ["김치찌ㅉ개", "된장찌개", "로제마라어묵찌개"]
+tab_meins = ["김치찌개", "된장찌개", "로제마라어묵찌개"]
 tab1, tab2, tab3 = st.tabs(tab_meuns)
 img1 = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA0MTJfMTg1%2FMDAxNjgxMjk1NzY4MTA3.byuBE3llW2ljkxpopgBTZRrbxZ-tz4SZNa20DmY0Ylsg.MqfIeGQZvtz25GXK1eBDeQtD5ZZxjwiPWIawS6pdr2gg.JPEG.iamjieunpark%2F1681295600930.jpg&type=sc960_832"
 tab1.image(img1)
