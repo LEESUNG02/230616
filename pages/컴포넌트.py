@@ -80,19 +80,19 @@ s = col2.slider("잔소리 강도 선택", min_value=1, max_value=10)    # min_v
 b = col3.selectbox("잔소리 말투 선택",["친절하게", "반말", "모욕적"])
 if mode:
     # r -> 취업, 코딩, 지각
-    format = Nome
-    if b == "친절하게"
+    format = None
+    if b == "친절하게":
         format = lambda x: f"여러분~ {x}"
-    else: b == "반말"
+    elif b == "반말":
         format = lambda x: f"야! {x}"
-    else b == "모욕적"
-        format - lambda x: f"xxxxx! {x}"
+    elif b == "모욕적":
+        format = lambda x: f"xxxxx! {x}"
     if r == "취업":
         for i in range(s):
             st.write(format("여러분 8월에는 자소서 넣어야겠죠?"))
-    else r == "코딩":
+    elif r == "코딩":
         st.write(format("저보다 파이썬 잘해요?"))
-    else r == "지각":
+    elif r == "지각":
         st.write(format("9시랑 9시 1분은 다른 거예요"))
 
 
