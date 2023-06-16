@@ -23,6 +23,12 @@ st.image("img/img.jpeg")  # 파일 경로 (app.py)
 st.image(image="img/img.jpeg")  # 키워드를 사용해서...
 st.image("img/img.jpeg", use_column_width=True)  # 파일 경로 (app.py)
 st.image("img/img.jpeg", width=100)  # 파일 경로 (app.py)
+
+st.image("img/img.jpeg")
+st.image(image="img/img.jpeg")
+st.image("img/img.jpeg", use_column_width=True)  # 파일 경로 (app.py)
+st.image("img/img.jpeg", width=100)  # 파일 경로 (app.py)
+
 # https://imgur.com/
 
 
