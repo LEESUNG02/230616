@@ -67,9 +67,9 @@ if mode:
     if r == "취업":
         for i in range(s):
             st.write("여러분 8월에는 자소서 넣어야겠죠?")
-    else r == "코딩":
+    elif r == "코딩":
         st.write("저보다 파이썬 잘해요?")
-    else r == "지각":
+    elif r == "지각":
         st.write("9시랑 9시 1분은 다른 거예요")
 
 st.divider()
