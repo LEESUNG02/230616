@@ -20,26 +20,27 @@ col1, col2 = st.columns(2) # 리스트 언패킹
 col1.write("왼쪽 열")
 col2.write("오른쪽 열")
 
-with col1:
+with col1: # col1을 기준으로 streamlit을 써주겠다
+    # 블록 (:) 을 열면 -> 이 안에서는 streamlit 기능 실행시 col1에 종속
     st.write("왼쪽")
-# col1을 기준으로 streamlit을 써주겠다
-# 블록 (:) 을 열면 -> 이 안에서는 streamlit 기능 실행시 col2에 종속
-with col2:
+with col2: # col2을 기준으로 streamlit을 써주겠다
+    # 블록 (:) 을 열면 -> 이 안에서는 streamlit 기능 실행시 col2에 종속
     st.write("오른쪽")
 
-# tabs = st.tabs(["김치찌ㅉ개", "된장찌개", "로제마라어묵찌개"])
-tab_meins = ["김치찌개", "된장찌개", "로제마라어묵찌개"]
-tab1, tab2, tab3 = st.tabs(tab_meuns)
-img1 = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA0MTJfMTg1%2FMDAxNjgxMjk1NzY4MTA3.byuBE3llW2ljkxpopgBTZRrbxZ-tz4SZNa20DmY0Ylsg.MqfIeGQZvtz25GXK1eBDeQtD5ZZxjwiPWIawS6pdr2gg.JPEG.iamjieunpark%2F1681295600930.jpg&type=sc960_832"
+# tabs = st.tabs(["김치찌개", "된장찌개", "로제마라어묵찌개"])
+tab_menus = ["김치찌개", "된장찌개", "로제마라어묵찌개"]
+tab1, tab2, tab3 = st.tabs(tab_menus)
+img1 = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4MFBhxEu7tdtEmSpJ-DEzVl9si8NYOiYmbruRyOr7vYS8ZMLSpu60YsPo5WtmB5xg_F0&usqp=CAU"
 tab1.image(img1)
 with tab2:
-    img2 ="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzAzMjBfMTU3%2FMDAxNjc5MzA1NDUyOTU0.C3XnDShbwPp0HSvvRIF8yzxiTmce3evvJJTk_VzlNvQg.K1GGfilZprrzX_EoC1iKE9SOipaHZGwI4Zi7Y6CqLacg.JPEG.bdan9333%2FIMG_0071.JPG&type=sc960_832"
+    img2 = "https://imagescdn.gettyimagesbank.com/500/201708/jv10940386.jpg"
     st.image(img2)
-tab3.write("이런건 없어요...상상도 마라요")
+tab3.write("이런 건 없어요... 상상도 마라요")
 
-exp = st.expander("Surprise!!!", expanded=false)
+exp = st.expander("Surprise!!!", expanded=False)
 exp.image("https://i.namu.wiki/i/5lWwYGj-VC8ZqJxug7Exm5-7rHE97fdZui3DWEAjm0zdLiBCbcdw4mLyGhcbZ_KecZOQr4rtwNJSFs63Rsdd_Q.webp")
-# whit exp: ...
+# with exp: ...
+
 
 # 입력
 st.title("입력")
