@@ -24,10 +24,10 @@ st.image(image="img/img.jpeg")  # 키워드를 사용해서...
 st.image("img/img.jpeg", use_column_width=True)  # 파일 경로 (app.py)
 st.image("img/img.jpeg", width=100)  # 파일 경로 (app.py)
 
-st.image("img/img.jpeg")
-st.image(image="img/img.jpeg")
-st.image("img/img.jpeg", use_column_width=True)  # 파일 경로 (app.py)
-st.image("img/img.jpeg", width=100)  # 파일 경로 (app.py)
+st.image("다운로드/다운로드.jpeg")  # 파일 경로 (app.py)
+st.image(image="다운로드/다운로드.jpeg")  # 키워드를 사용해서...
+st.image("다운로드/다운로드.jpeg", use_column_width=True)  # 파일 경로 (app.py)
+st.image("다운로드/다운로드.jpeg", width=100)  # 파일 경로 (app.py)
 
 # https://imgur.com/
 
