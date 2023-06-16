@@ -216,6 +216,7 @@ st.write(f"신랑 {name}과 신부{name2}는 ...")
 # number = st.number_input("당신의 나이는?")
 number = st.number_input("당신의 나이는?", step=1) # step는 하나의
 # st.write(f"나의 나이는 {number}세")
+age = st.number_input(f"나의 나이는?", step=1)
 st.write(f"나의 나이는 {age}세")
 height = st.number_input("당신의 키는?", step=10)
 st.write(f"나의 키는 {height}cm")
