@@ -244,11 +244,11 @@ b = col3.selectbox("잔소리 말투 선택",["친절하게", "반말", "모욕�
 if mode:
     # r -> 취업, 코딩, 지각
     format = Nome
-    if b == "친절하게"
+    if b == "친절하게":
         format = lambda x: f"여러분~ {x}"
-    else: b == "반말"
+    else: b == "반말":
         format = lambda x: f"야! {x}"
-    else b == "모욕적"
+else b == "모욕적":
         format - lambda x: f"xxxxx! {x}"
     if r == "취업":
         for i in range(s):
