@@ -75,7 +75,7 @@ if mode:
 st.divider()
 mode = st.checkbox('강사님 잔소리모드')  # bool (T/F)
 col1, col2, col3 = st.columns(3)
-r = col2.radio("잔소리 내용 선택", ["취업", "지각", "코딩"])
+r = col1.radio("잔소리 내용 선택", ["취업", "지각", "코딩"])
 s = col2.slider("잔소리 강도 선택", min_value=1, max_value=10)    # min_value, max_value 목소리 낮추는 옵션
 b = col3.selectbox("잔소리 말투 선택",["친절하게", "반말", "모욕적"])
 if mode:
