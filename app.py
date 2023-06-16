@@ -190,8 +190,8 @@ with col1:
 with col2:
     st.write("오른쪽")
 
-# tabs = st.tabs(["김치찌ㅉ개", "된장찌개", "로제마라어묵찌개"])
-tab_meuns = ["김치찌ㅉ개", "된장찌개", "로제마라어묵찌개"]
+# tabs = st.tabs(["김치찌개", "된장찌개", "로제마라어묵찌개"])
+tab_meuns = ["김치찌개", "된장찌개", "로제마라어묵찌개"]
 tab1, tab2, tab3 = st.tabs(tab_meuns)
 img1 = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA0MTJfMTg1%2FMDAxNjgxMjk1NzY4MTA3.byuBE3llW2ljkxpopgBTZRrbxZ-tz4SZNa20DmY0Ylsg.MqfIeGQZvtz25GXK1eBDeQtD5ZZxjwiPWIawS6pdr2gg.JPEG.iamjieunpark%2F1681295600930.jpg&type=sc960_832"
 tab1.image(img1)
@@ -237,7 +237,10 @@ if mode:
         st.write("9시랑 9시 1분은 다른 거예요")
 
 st.divider()
+<<<<<<< HEAD
 # mode = st.checkbox("강사님 잔소리모드")  # bool (T/F)
+=======
+>>>>>>> origin/master
 mode = st.checkbox("강사님 잔소리모드")  # bool (T/F)
 col1, col2, col3 = st.columns(3)
 r = col1.radio("잔소리 내용 선택", ["취업", "코딩", "지각"])
