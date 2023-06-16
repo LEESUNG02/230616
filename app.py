@@ -4,6 +4,8 @@
 # streamlit run app.py
 
 import streamlit as st
+
+
 # streamlit -> (가져오기) -> as (st 이름)
 # st라는 변수명으로 streamlit 의 기능을 사용하겠다.
 
@@ -38,7 +40,18 @@ st.image("img/다운로드.jpeg", width=100)  # 파일 경로 (app.py)
 # st.write -> 입력하는 것에 맞춰서 알아서 결정 => 마크다운
 # st.markdown -> 명백하게 마크다운을 사용하겠다
 
-stt.write# 제목 마크다운
+
+import streamlit as st  # streamlit -> import (가져오기) -> as (st 이름)
+
+# 마크다운
+# https://heropy.blog/2017/09/30/markdown/
+st.title("마크다운")
+# st.write / st.markdown
+# st.write -> 입력하는 것에 맞춰서 알아서 결정 => 마크다운
+# st.markdown -> 명백하게 마크다운을 사용하겠다
+st.divider()
+st.subheader("제목")
+# 제목 마크다운
 st.write("""
 # 가장 큰 제목 (h1 - headline1 - st.title)
 ## 그 다음 큰 제목 (h2 - headline2 - st.header)
@@ -47,7 +60,8 @@ st.write("""
 ##### 이건 없겠지? (h5)
 ###### 이것도 있나? (h6)
 ####### 이건 없어.
-""") # 문자열을 넣으면 마크다운임
+""")  # 문자열을 넣으면 마크다운임
+st.divider()
 
 # 서식
 text = """
@@ -70,3 +84,107 @@ text = """
 # st.write(text)
 # 태그를 허용하는 옵션
 st.markdown(text, unsafe_allow_html=True)
+
+# 레이아웃
+st.divider()
+st.subheader("레이아웃")
+st.write("""
+         ### 순서가 없는 리스트
+         1. 순서가
+         2. 있는
+         4. 리스트 - 숫자를 건너 뛰어도 무시하고 순서를 따름
+            1. 들여쓰기1
+                1. 들여쓰기2 #1로 시작하지 않으면 들여쓰기는
+                    1. 들여쓰기3
+        1. 순서가
+        1. 1로 넣어도
+        1. 증가됨
+        
+         * 별 또는 (-)는  여백 1칸 이상과 사용하면 순서가 없는 리스트
+         * 별 또는 (-)는  여백 1칸 이상과 사용하면 순서가 없는 리스트
+         * 별 또는 (-)는  여백 1칸 이상과 사용하면 순서가 없는 리스트
+
+        $$$ 가로줄
+        ---
+        (---)
+        ___
+        (___)
+        
+        ### 테이블(표)
+        |머리|
+        |---||---|
+        |몸통|
+        |이름|직업|
+        |파이썬|백수|
+        |자바|일잘러|
+        |-|-|
+""")
+
+# 링크
+st.divider()
+st.subheader("링크")
+l1 = https://naver.com
+l2 = https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA1MjNfMjYx%2FMDAxNjg0ODQyOTU2MzAy.NqVTY2XhBU4Tv_TNXQ9BB_Mm9TNadkXibZZ_XpDYuxAg.rvcI1B9yOW2yFvekAvsjFKfttnvYw2B_xRCV4P5Mg4sg.PNG.jisoo-060202%2Fimage.png&type=sc960_832
+st.write(f"""
+    * [표시할 텍스트](https://naver.com)
+    * [표시할 텍스트]({l1})
+    * ![이미지에 대한 설명]{https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA1MjNfMjYx%2FMDAxNjg0ODQyOTU2MzAy.NqVTY2XhBU4Tv_TNXQ9BB_Mm9TNadkXibZZ_XpDYuxAg.rvcI1B9yOW2yFvekAvsjFKfttnvYw2B_xRCV4P5Mg4sg.PNG.jisoo-060202%2Fimage.png&type=sc960_832)
+    * ![이미지에 대한 설명]({l2}}
+    * [![이미지에 대한 설명](https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA1MjNfMjYx%2FMDAxNjg0ODQyOTU2MzAy.NqVTY2XhBU4Tv_TNXQ9BB_Mm9TNadkXibZZ_XpDYuxAg.rvcI1B9yOW2yFvekAvsjFKfttnvYw2B_xRCV4P5Mg4sg.PNG.jisoo-060202%2Fimage.png&type=sc960_832)
+""")
+
+#인용
+st.divider()
+st.subheader("인용")
+if st.write(f"""
+    > 무언가 멋진 말 - 유명한 사람
+    
+    > 진입장벽은 수익이다 - 어느 코딩 강사
+    
+    책이나, 사람말 인용할 떄...
+    >인용 첫줄
+    > > 인용문 안에 인용문
+
+    ### 코드
+    '코드를 나타낼 떄 주로 쓰이는 묶음 표시'
+    '''
+         
+    여러 줄로 코드를 나타내고
+    줄바꿈도 반영하고 싶으면..:
+    print("파이썬!")
+    '''
+    '''python
+    print("파이썬")
+    '''
+"""
+
+
+import streamlit as st
+
+st.title("컴포넌트")
+# 위-아래로 한줄로만...
+st.write("🍉")
+cols = st.columns(2) # 컬럼 리스트
+cols[0].write("🍉")
+cols[1].write("🍉")
+
+cols = st.columns(3)
+# 🌋 -> n 등분 -> 3등분
+cols[0].write("🌋")
+cols[1].write("🌋")
+cols[-1].write("🌋")
+cols = cols[0].columns(3) # 열의 열린 거임
+cols[0].write("🌋")
+cols[1].write("🌋")
+cols[-1].write("🌋")
+col1, col2 = st.columns(2) # 리스트 언패킹
+col1.write("왼쪽 열")
+col2.write("오른쪽 열")
+
+with col1:
+    st.write("왼쪽")
+# col1을 기준으로 streamlit을 써주겠다
+# 블록 (:) 을 열면 -> 이 안에서는 streamlit 기능 실행시 col2에 종속
+with eol2:
+    st.write("오른쪽")
+
